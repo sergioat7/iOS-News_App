@@ -12,8 +12,6 @@ class ErrorController: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
-    @IBOutlet var bottomViewHeight: NSLayoutConstraint!
-    
     
     init(){
         super.init(nibName: "ErrorView", bundle: nil)
@@ -27,8 +25,6 @@ class ErrorController: UIViewController {
         super.viewDidLoad()
         
         errorLabel.attributedText = NSAttributedString(string: errorLabel.text!, attributes: [.font: UIFont.robotoRegular18, .foregroundColor: UIColor.negro])
-        
-        bottomViewHeight.constant = Utilidades.hasPhysicalHomeButton() ? 20 : 0
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -10,10 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    
     @IBOutlet weak var titleLabel: UILabel!
-    
-    @IBOutlet var bottomViewHeight: NSLayoutConstraint!
     
     
     init(){
@@ -29,8 +26,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         titleLabel.attributedText = NSAttributedString(string: "The\nNew York\nTimes", attributes: [.font: UIFont.englishTowneNormal70, .foregroundColor: UIColor.negro])
-        
-        bottomViewHeight.constant = Utilidades.hasPhysicalHomeButton() ? 20 : 0
     }
     
     override func viewWillAppear(_ animated: Bool) {

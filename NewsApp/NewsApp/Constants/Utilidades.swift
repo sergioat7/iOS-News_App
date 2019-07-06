@@ -75,15 +75,6 @@ class Utilidades {
         return v
     }
     
-    static func hasPhysicalHomeButton() -> Bool {
-        if #available(iOS 11.0, *), let keyWindow = UIApplication.shared.keyWindow, keyWindow.safeAreaInsets.bottom > 0 {
-            return true
-        }
-        else {
-            return false
-        }
-    }
-    
     static func createGradientLayer(_ initColor: CGColor, _ endColor: CGColor, _ initLocation: NSNumber, _ endLocation: NSNumber, _ frame: CGRect) -> CAGradientLayer {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [initColor, endColor]
