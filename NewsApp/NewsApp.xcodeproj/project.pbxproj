@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0B171F22D251F300256C98 /* ArticleDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B171D22D251F300256C98 /* ArticleDataController.swift */; };
+		5B0B172022D251F300256C98 /* ArticleDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B0B171E22D251F300256C98 /* ArticleDataView.xib */; };
 		5B8917B822D0BB1A0028E918 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8917B722D0BB1A0028E918 /* AppDelegate.swift */; };
 		5B8917BF22D0BB1A0028E918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8917BE22D0BB1A0028E918 /* Assets.xcassets */; };
 		5B8917C222D0BB1A0028E918 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8917C022D0BB1A0028E918 /* LaunchScreen.storyboard */; };
@@ -41,9 +43,19 @@
 		5B89181322D1072F0028E918 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89181222D1072F0028E918 /* UIColor.swift */; };
 		5B89181522D1073F0028E918 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89181422D1073F0028E918 /* UIFont.swift */; };
 		5B89181C22D112A20028E918 /* EnglishTowne-Normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B89181B22D112A20028E918 /* EnglishTowne-Normal.ttf */; };
+		5B89182022D12DDC0028E918 /* SearchNewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89181E22D12DDC0028E918 /* SearchNewsController.swift */; };
+		5B89182122D12DDC0028E918 /* SearchNewsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B89181F22D12DDC0028E918 /* SearchNewsView.xib */; };
+		5B89182322D140760028E918 /* PickOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89182222D140760028E918 /* PickOptionButton.swift */; };
+		5B89182822D155C60028E918 /* ArticlesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B89182622D155C60028E918 /* ArticlesView.xib */; };
+		5B89182E22D156FC0028E918 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89182C22D156FC0028E918 /* ArticleTableViewCell.swift */; };
+		5B89182F22D156FC0028E918 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B89182D22D156FC0028E918 /* ArticleTableViewCell.xib */; };
+		5B89183122D15AF50028E918 /* ArticlesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89183022D15AF50028E918 /* ArticlesController.swift */; };
+		5B89183322D15B450028E918 /* ArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89183222D15B450028E918 /* ArticlesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B0B171D22D251F300256C98 /* ArticleDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDataController.swift; sourceTree = "<group>"; };
+		5B0B171E22D251F300256C98 /* ArticleDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleDataView.xib; sourceTree = "<group>"; };
 		5B8917B422D0BB1A0028E918 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8917B722D0BB1A0028E918 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B8917BE22D0BB1A0028E918 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +92,14 @@
 		5B89181222D1072F0028E918 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		5B89181422D1073F0028E918 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		5B89181B22D112A20028E918 /* EnglishTowne-Normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EnglishTowne-Normal.ttf"; sourceTree = "<group>"; };
+		5B89181E22D12DDC0028E918 /* SearchNewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNewsController.swift; sourceTree = "<group>"; };
+		5B89181F22D12DDC0028E918 /* SearchNewsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchNewsView.xib; sourceTree = "<group>"; };
+		5B89182222D140760028E918 /* PickOptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickOptionButton.swift; sourceTree = "<group>"; };
+		5B89182622D155C60028E918 /* ArticlesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticlesView.xib; sourceTree = "<group>"; };
+		5B89182C22D156FC0028E918 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		5B89182D22D156FC0028E918 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		5B89183022D15AF50028E918 /* ArticlesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesController.swift; sourceTree = "<group>"; };
+		5B89183222D15B450028E918 /* ArticlesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +117,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B0B171C22D251D700256C98 /* ArticleData */ = {
+			isa = PBXGroup;
+			children = (
+				5B0B171D22D251F300256C98 /* ArticleDataController.swift */,
+				5B0B171E22D251F300256C98 /* ArticleDataView.xib */,
+			);
+			path = ArticleData;
+			sourceTree = "<group>";
+		};
 		5B8917AB22D0BB1A0028E918 = {
 			isa = PBXGroup;
 			children = (
@@ -117,12 +146,13 @@
 		5B8917B622D0BB1A0028E918 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
-				5B8917D722D0C52E0028E918 /* Alamofire */,
 				5B8917CF22D0BF680028E918 /* BaseActivity */,
 				5B8917FC22D0F8AA0028E918 /* Constants */,
+				5B89182B22D156E10028E918 /* Cells */,
 				5B8917F922D0F7B60028E918 /* Custom Views */,
 				5B89180322D0FFCA0028E918 /* Extensions */,
 				5B8917C922D0BB830028E918 /* Controllers */,
+				5B8917D722D0C52E0028E918 /* Alamofire */,
 				5B8917BE22D0BB1A0028E918 /* Assets.xcassets */,
 				5B8917B722D0BB1A0028E918 /* AppDelegate.swift */,
 				5B8917D222D0C3A30028E918 /* Session.swift */,
@@ -136,8 +166,11 @@
 		5B8917C922D0BB830028E918 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5B0B171C22D251D700256C98 /* ArticleData */,
+				5B89182422D155A80028E918 /* Articles */,
 				5B8917DA22D0C5BD0028E918 /* Error */,
 				5B8917CE22D0BEA40028E918 /* Main */,
+				5B89181D22D12DC50028E918 /* SearchNews */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -216,6 +249,7 @@
 			children = (
 				5B8917FA22D0F7CB0028E918 /* RoundedButton.swift */,
 				5B89180122D0FB670028E918 /* SpinnerView.swift */,
+				5B89182222D140760028E918 /* PickOptionButton.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -241,6 +275,34 @@
 				5B89180E22D1004C0028E918 /* UIViewController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5B89181D22D12DC50028E918 /* SearchNews */ = {
+			isa = PBXGroup;
+			children = (
+				5B89181E22D12DDC0028E918 /* SearchNewsController.swift */,
+				5B89181F22D12DDC0028E918 /* SearchNewsView.xib */,
+			);
+			path = SearchNews;
+			sourceTree = "<group>";
+		};
+		5B89182422D155A80028E918 /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				5B89183022D15AF50028E918 /* ArticlesController.swift */,
+				5B89182622D155C60028E918 /* ArticlesView.xib */,
+				5B89183222D15B450028E918 /* ArticlesTableViewController.swift */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		5B89182B22D156E10028E918 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5B89182C22D156FC0028E918 /* ArticleTableViewCell.swift */,
+				5B89182D22D156FC0028E918 /* ArticleTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,8 +368,12 @@
 				5B8917DE22D0C5CB0028E918 /* ErrorView.xib in Resources */,
 				5B8917F622D0F6420028E918 /* Roboto-Italic.ttf in Resources */,
 				5B8917F722D0F6420028E918 /* Roboto-LightItalic.ttf in Resources */,
+				5B89182F22D156FC0028E918 /* ArticleTableViewCell.xib in Resources */,
+				5B0B172022D251F300256C98 /* ArticleDataView.xib in Resources */,
+				5B89182122D12DDC0028E918 /* SearchNewsView.xib in Resources */,
 				5B8917F822D0F6420028E918 /* Roboto-Light.ttf in Resources */,
 				5B8917C222D0BB1A0028E918 /* LaunchScreen.storyboard in Resources */,
+				5B89182822D155C60028E918 /* ArticlesView.xib in Resources */,
 				5B8917F422D0F6420028E918 /* Roboto-Bold.otf in Resources */,
 				5B8917BF22D0BB1A0028E918 /* Assets.xcassets in Resources */,
 				5B8917F522D0F6420028E918 /* Roboto-Regular.otf in Resources */,
@@ -350,7 +416,9 @@
 				5B8917E922D0D1AB0028E918 /* AppNavigationDrawerController.swift in Sources */,
 				5B89180722D0FFF70028E918 /* NavigationBar.swift in Sources */,
 				5B89180F22D1004C0028E918 /* UIViewController.swift in Sources */,
+				5B89182E22D156FC0028E918 /* ArticleTableViewCell.swift in Sources */,
 				5B8917E022D0C6820028E918 /* NYTimesRouter.swift in Sources */,
+				5B89183322D15B450028E918 /* ArticlesTableViewController.swift in Sources */,
 				5B89180B22D100300028E918 /* UIButton.swift in Sources */,
 				5B8917D322D0C3A30028E918 /* Session.swift in Sources */,
 				5B8917CC22D0BB9A0028E918 /* MainController.swift in Sources */,
@@ -358,11 +426,15 @@
 				5B89181522D1073F0028E918 /* UIFont.swift in Sources */,
 				5B89181322D1072F0028E918 /* UIColor.swift in Sources */,
 				5B89180522D0FFE10028E918 /* Date.swift in Sources */,
+				5B0B171F22D251F300256C98 /* ArticleDataController.swift in Sources */,
+				5B89182322D140760028E918 /* PickOptionButton.swift in Sources */,
 				5B8917FB22D0F7CB0028E918 /* RoundedButton.swift in Sources */,
 				5B8917D122D0BF770028E918 /* AppNavigationController.swift in Sources */,
 				5B8917D922D0C5440028E918 /* AlamofireRetrier.swift in Sources */,
 				5B89180022D0FA1C0028E918 /* Utilidades.swift in Sources */,
+				5B89183122D15AF50028E918 /* ArticlesController.swift in Sources */,
 				5B8917DD22D0C5CB0028E918 /* ErrorController.swift in Sources */,
+				5B89182022D12DDC0028E918 /* SearchNewsController.swift in Sources */,
 				5B89180922D100200028E918 /* String.swift in Sources */,
 				5B89180222D0FB670028E918 /* SpinnerView.swift in Sources */,
 				5B8917B822D0BB1A0028E918 /* AppDelegate.swift in Sources */,

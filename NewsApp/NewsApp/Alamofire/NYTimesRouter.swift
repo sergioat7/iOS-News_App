@@ -11,28 +11,29 @@ import Alamofire
 
 enum NYTimesRouter: URLRequestConvertible {
     static let apiKey = "32534511931e4dc1b5627b6918ca0d6b"
-    static let baseURLString = "https://api.nytimes.com/svc"
+    static let baseURLString = "https://api.nytimes.com/svc/mostpopular/v2"
     
-    case news([String: Any]?)
+    case getNews([String])
     
     func asURLRequest() throws -> URLRequest {
         var method: HTTPMethod {
             switch self {
-            case .news:
+            case .getNews:
                 return .get
             }
         }
-        let params: ([String: Any]?) = {
+        let params: ([String : Any]) = {
             switch self {
-            case .news(let newValue):
-                return newValue
+            case .getNews:
+                return ["api-key" : NYTimesRouter.apiKey]
             }
         }()
         let url: URL = {
             let relativePath: String?
             switch self {
-            case .news:
-                relativePath = "/mostpopular/v2/emailed/7.json?api-key=" + NYTimesRouter.apiKey
+            case .getNews(let newValue):
+                relativePath = "/\(newValue[0])/all-sections/\(newValue[1]).json"
+//                relativePath = "/\(newValue[0])/all-sections/facebook/\(newValue[1]).json?api-key=" + NYTimesRouter.apiKey
             }
             var url = URL(string: NYTimesRouter.baseURLString)!
             if let relativePath = relativePath {

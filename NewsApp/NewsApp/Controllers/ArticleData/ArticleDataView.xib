@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArticleDataController" customModule="NewsApp" customModuleProvider="target">
+            <connections>
+                <outlet property="spinnerContainerView" destination="ZNz-dB-vn1" id="H2f-mI-5qt"/>
+                <outlet property="spinnerView" destination="3Xx-wz-6ku" id="Mxj-k2-FNG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNz-dB-vn1">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xx-wz-6ku" customClass="SpinnerView" customModule="NewsApp" customModuleProvider="target">
+                            <rect key="frame" x="137.5" y="273.5" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="3Xx-wz-6ku" secondAttribute="height" multiplier="1:1" id="H9U-Gm-bXZ"/>
+                                <constraint firstAttribute="height" constant="100" id="vjj-dh-8Gc"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="3Xx-wz-6ku" firstAttribute="centerY" secondItem="ZNz-dB-vn1" secondAttribute="centerY" id="8jR-TT-5wT"/>
+                        <constraint firstItem="3Xx-wz-6ku" firstAttribute="centerX" secondItem="ZNz-dB-vn1" secondAttribute="centerX" id="Ods-wD-f1L"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="ZNz-dB-vn1" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="0Nt-A7-lcT"/>
+                <constraint firstItem="ZNz-dB-vn1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Lpy-NC-A9f"/>
+                <constraint firstItem="ZNz-dB-vn1" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="RmI-AS-uCo"/>
+                <constraint firstItem="ZNz-dB-vn1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Xtb-wt-dGg"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

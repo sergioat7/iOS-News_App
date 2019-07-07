@@ -41,6 +41,7 @@ class MainViewController: UIViewController {
     
     
     @IBAction func searchNews(_ sender: Any) {
+        navigationController?.pushViewController(SearchNewsController(), animated: true)
     }
     
 }

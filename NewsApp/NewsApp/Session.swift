@@ -12,7 +12,10 @@ import Alamofire
 
 class Session: NSObject {
     
-    
+    fileprivate static let _sharedSession = Session()
+    static func sharedSession() -> Session {
+        return _sharedSession
+    }
     
     /**************************** Configuración de Alamofire ****************************/
     fileprivate static var _sessionManager: SessionManager?
