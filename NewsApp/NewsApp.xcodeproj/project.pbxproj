@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		5B0B171F22D251F300256C98 /* ArticleDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B171D22D251F300256C98 /* ArticleDataController.swift */; };
 		5B0B172022D251F300256C98 /* ArticleDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B0B171E22D251F300256C98 /* ArticleDataView.xib */; };
+		5B0B172E22D2830900256C98 /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0B172A22D2830800256C98 /* Motion.framework */; };
+		5B0B172F22D2830900256C98 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0B172B22D2830800256C98 /* Alamofire.framework */; };
+		5B0B173022D2830900256C98 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0B172C22D2830900256C98 /* SDWebImage.framework */; };
+		5B0B173122D2830900256C98 /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0B172D22D2830900256C98 /* Material.framework */; };
 		5B8917B822D0BB1A0028E918 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8917B722D0BB1A0028E918 /* AppDelegate.swift */; };
 		5B8917BF22D0BB1A0028E918 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8917BE22D0BB1A0028E918 /* Assets.xcassets */; };
 		5B8917C222D0BB1A0028E918 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8917C022D0BB1A0028E918 /* LaunchScreen.storyboard */; };
@@ -16,13 +20,10 @@
 		5B8917CD22D0BB9A0028E918 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8917CB22D0BB9A0028E918 /* MainView.xib */; };
 		5B8917D122D0BF770028E918 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8917D022D0BF770028E918 /* AppNavigationController.swift */; };
 		5B8917D322D0C3A30028E918 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8917D222D0C3A30028E918 /* Session.swift */; };
-		5B8917D622D0C4420028E918 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8917D522D0C4420028E918 /* Alamofire.framework */; };
 		5B8917D922D0C5440028E918 /* AlamofireRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8917D822D0C5440028E918 /* AlamofireRetrier.swift */; };
 		5B8917DD22D0C5CB0028E918 /* ErrorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8917DB22D0C5CB0028E918 /* ErrorController.swift */; };
 		5B8917DE22D0C5CB0028E918 /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8917DC22D0C5CB0028E918 /* ErrorView.xib */; };
 		5B8917E022D0C6820028E918 /* NYTimesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8917DF22D0C6820028E918 /* NYTimesRouter.swift */; };
-		5B8917E622D0CFF60028E918 /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8917E422D0CFF60028E918 /* Material.framework */; };
-		5B8917E722D0CFF60028E918 /* Motion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8917E522D0CFF60028E918 /* Motion.framework */; };
 		5B8917E922D0D1AB0028E918 /* AppNavigationDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8917E822D0D1AB0028E918 /* AppNavigationDrawerController.swift */; };
 		5B8917F322D0F6420028E918 /* Roboto-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5B8917ED22D0F6400028E918 /* Roboto-Medium.otf */; };
 		5B8917F422D0F6420028E918 /* Roboto-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5B8917EE22D0F6410028E918 /* Roboto-Bold.otf */; };
@@ -39,7 +40,6 @@
 		5B89180B22D100300028E918 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89180A22D100300028E918 /* UIButton.swift */; };
 		5B89180D22D1003D0028E918 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89180C22D1003D0028E918 /* UIImage.swift */; };
 		5B89180F22D1004C0028E918 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89180E22D1004C0028E918 /* UIViewController.swift */; };
-		5B89181122D106780028E918 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B89181022D106780028E918 /* SDWebImage.framework */; };
 		5B89181322D1072F0028E918 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89181222D1072F0028E918 /* UIColor.swift */; };
 		5B89181522D1073F0028E918 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89181422D1073F0028E918 /* UIFont.swift */; };
 		5B89181C22D112A20028E918 /* EnglishTowne-Normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B89181B22D112A20028E918 /* EnglishTowne-Normal.ttf */; };
@@ -56,6 +56,10 @@
 /* Begin PBXFileReference section */
 		5B0B171D22D251F300256C98 /* ArticleDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDataController.swift; sourceTree = "<group>"; };
 		5B0B171E22D251F300256C98 /* ArticleDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleDataView.xib; sourceTree = "<group>"; };
+		5B0B172A22D2830800256C98 /* Motion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Motion.framework; path = Carthage/Build/iOS/Motion.framework; sourceTree = SOURCE_ROOT; };
+		5B0B172B22D2830800256C98 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		5B0B172C22D2830900256C98 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = SOURCE_ROOT; };
+		5B0B172D22D2830900256C98 /* Material.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Material.framework; path = Carthage/Build/iOS/Material.framework; sourceTree = SOURCE_ROOT; };
 		5B8917B422D0BB1A0028E918 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8917B722D0BB1A0028E918 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B8917BE22D0BB1A0028E918 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,13 +69,10 @@
 		5B8917CB22D0BB9A0028E918 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		5B8917D022D0BF770028E918 /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
 		5B8917D222D0C3A30028E918 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		5B8917D522D0C4420028E918 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		5B8917D822D0C5440028E918 /* AlamofireRetrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRetrier.swift; sourceTree = "<group>"; };
 		5B8917DB22D0C5CB0028E918 /* ErrorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorController.swift; sourceTree = "<group>"; };
 		5B8917DC22D0C5CB0028E918 /* ErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
 		5B8917DF22D0C6820028E918 /* NYTimesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesRouter.swift; sourceTree = "<group>"; };
-		5B8917E422D0CFF60028E918 /* Material.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Material.framework; path = Carthage/Build/iOS/Material.framework; sourceTree = SOURCE_ROOT; };
-		5B8917E522D0CFF60028E918 /* Motion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Motion.framework; path = Carthage/Build/iOS/Motion.framework; sourceTree = SOURCE_ROOT; };
 		5B8917E822D0D1AB0028E918 /* AppNavigationDrawerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationDrawerController.swift; sourceTree = "<group>"; };
 		5B8917ED22D0F6400028E918 /* Roboto-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.otf"; sourceTree = "<group>"; };
 		5B8917EE22D0F6410028E918 /* Roboto-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.otf"; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 		5B89180A22D100300028E918 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		5B89180C22D1003D0028E918 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		5B89180E22D1004C0028E918 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		5B89181022D106780028E918 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = SOURCE_ROOT; };
 		5B89181222D1072F0028E918 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		5B89181422D1073F0028E918 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		5B89181B22D112A20028E918 /* EnglishTowne-Normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EnglishTowne-Normal.ttf"; sourceTree = "<group>"; };
@@ -107,10 +107,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B89181122D106780028E918 /* SDWebImage.framework in Frameworks */,
-				5B8917D622D0C4420028E918 /* Alamofire.framework in Frameworks */,
-				5B8917E622D0CFF60028E918 /* Material.framework in Frameworks */,
-				5B8917E722D0CFF60028E918 /* Motion.framework in Frameworks */,
+				5B0B172E22D2830900256C98 /* Motion.framework in Frameworks */,
+				5B0B173122D2830900256C98 /* Material.framework in Frameworks */,
+				5B0B173022D2830900256C98 /* SDWebImage.framework in Frameworks */,
+				5B0B172F22D2830900256C98 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,10 +126,21 @@
 			path = ArticleData;
 			sourceTree = "<group>";
 		};
+		5B0B172122D282A400256C98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B0B172B22D2830800256C98 /* Alamofire.framework */,
+				5B0B172D22D2830900256C98 /* Material.framework */,
+				5B0B172A22D2830800256C98 /* Motion.framework */,
+				5B0B172C22D2830900256C98 /* SDWebImage.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		5B8917AB22D0BB1A0028E918 = {
 			isa = PBXGroup;
 			children = (
-				5B8917D422D0C4100028E918 /* Frameworks */,
+				5B0B172122D282A400256C98 /* Frameworks */,
 				5B8917B622D0BB1A0028E918 /* NewsApp */,
 				5B8917B522D0BB1A0028E918 /* Products */,
 			);
@@ -191,17 +202,6 @@
 				5B8917E822D0D1AB0028E918 /* AppNavigationDrawerController.swift */,
 			);
 			path = BaseActivity;
-			sourceTree = "<group>";
-		};
-		5B8917D422D0C4100028E918 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5B89181022D106780028E918 /* SDWebImage.framework */,
-				5B8917E422D0CFF60028E918 /* Material.framework */,
-				5B8917E522D0CFF60028E918 /* Motion.framework */,
-				5B8917D522D0C4420028E918 /* Alamofire.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		5B8917D722D0C52E0028E918 /* Alamofire */ = {
