@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum NYTimesRouter: URLRequestConvertible {
-    static let apiKey = "32534511931e4dc1b5627b6918ca0d6b"
+    static let apiKey = "2bB0BGGe2pysadVQorASzqyClBzI5w1G"
     static let baseURLString = "https://api.nytimes.com/svc/mostpopular/v2"
     
     case getNews([String])
