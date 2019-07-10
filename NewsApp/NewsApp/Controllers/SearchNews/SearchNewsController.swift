@@ -114,7 +114,7 @@ class SearchNewsController: UIViewController {
         switch pickerViewMode {
         case .type:
             typesButton.title = types[selectedType-1]
-            shareTypesViewHeight.constant = selectedType == 2 ? 100 : 0
+            shareTypesViewHeight.constant = selectedType == 2 ? 70 : 0
         case .period:
             periodsButton.title = periods[selectedPeriod-1]
         }
