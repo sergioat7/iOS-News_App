@@ -27,12 +27,7 @@ class ArticleTableViewCell: UITableViewCell {
     
     
     func setImage(_ imageURL: String?) {
-        if let _ = imageURL {
-            mainImageView.image = UIImage(named: imageURL!)
-        }
-        else {
-            mainImageView.image = nil
-        }
+        Utilidades.cargarImagen(imageURL, mainImageView)
     }
     func setTitle(_ text: String?) {
         if let _ = text {

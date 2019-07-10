@@ -14,12 +14,15 @@ class SearchNewsController: UIViewController {
     
     @IBOutlet weak var typesButton: PickOptionButton!
     @IBOutlet weak var periodsButton: PickOptionButton!
-    @IBOutlet weak var shareTypesButton: PickOptionButton!
+    
+    @IBOutlet weak var facebookSwitch: UISwitch!
+    @IBOutlet weak var twitterSwitch: UISwitch!
     
     @IBOutlet fileprivate var pickerView: UIPickerView!
     
     @IBOutlet fileprivate var hidePickerViewConstraint: NSLayoutConstraint!
-    @IBOutlet fileprivate var shareTypesButtonHeight: NSLayoutConstraint!
+    @IBOutlet fileprivate var shareTypesViewHeight: NSLayoutConstraint!
+    
     
     let types = ["mostemailed",
                  "mostshared",
@@ -31,16 +34,10 @@ class SearchNewsController: UIViewController {
                    "30"
                   ]
     var selectedPeriod = 0
-    let shareTypes = ["email",
-                   "facebook",
-                   "twitter"
-    ]
-    var selectedShareType = 0
     
     enum PickerViewMode: Int {
         case type = 0
         case period = 1
-        case shareType = 2
     }
     
     fileprivate var pickerViewMode: PickerViewMode = .type {
@@ -53,8 +50,6 @@ class SearchNewsController: UIViewController {
                 rowToSelect = selectedType
             case .period:
                 rowToSelect = selectedPeriod
-            case .shareType:
-                rowToSelect = selectedShareType
             }
             pickerView.selectRow(rowToSelect, inComponent: 0, animated: false)
         }
@@ -113,33 +108,15 @@ class SearchNewsController: UIViewController {
             completion: nil
         )
     }
-    @IBAction func showShareTypePickerView() {
-        pickerViewMode = .shareType
-        hidePickerViewConstraint.isActive = false
-        
-        UIView.animate(
-            withDuration: 0.25,
-            delay: 0,
-            usingSpringWithDamping: 1,
-            initialSpringVelocity: 0,
-            options: [.beginFromCurrentState],
-            animations: { () -> Void in
-                self.view.layoutIfNeeded()
-        },
-            completion: nil
-        )
-    }
     @IBAction func hidePickerView() {
         hidePickerViewConstraint.isActive = true
         
         switch pickerViewMode {
         case .type:
             typesButton.title = types[selectedType-1]
-            shareTypesButtonHeight.constant = selectedType == 2 ? 30 : 0
+            shareTypesViewHeight.constant = selectedType == 2 ? 100 : 0
         case .period:
             periodsButton.title = periods[selectedPeriod-1]
-        case .shareType:
-            shareTypesButton.title = shareTypes[selectedShareType-1]
         }
         
         UIView.animate(
@@ -162,8 +139,6 @@ class SearchNewsController: UIViewController {
                 selectedType = selectedRow
             case .period:
                 selectedPeriod = selectedRow
-            case .shareType:
-                selectedShareType = selectedRow
             }
             hidePickerView()
         }
@@ -180,17 +155,18 @@ class SearchNewsController: UIViewController {
         }
         let type = types[selectedType-1]
         let period = periods[selectedPeriod-1]
+        var shareType: String?
         if selectedType == 2 {
-            guard selectedShareType > 0 else {
-                shareTypesButton.showError("Debes seleccionar una fuente")
-                return
+            var sT = ""
+            if facebookSwitch.isOn {
+                sT += "facebook;"
             }
-            let shareType = shareTypes[selectedShareType-1]
-            navigationController?.pushViewController(ArticlesController(), animated: true)
+            if twitterSwitch.isOn {
+                sT += "twitter;"
+            }
+            shareType = sT != "" ? String(sT.dropLast()) : nil
         }
-        else {
-            navigationController?.pushViewController(ArticlesController(), animated: true)
-        }
+        navigationController?.pushViewController(ArticlesController(type, period, shareType), animated: true)
     }
     
 }
@@ -202,8 +178,6 @@ extension SearchNewsController: UIPickerViewDelegate, UIPickerViewDataSource {
             return row==0 ? "Selecciona tipo" : types[row - 1]
         case .period:
             return row==0 ? "Selecciona periodo" : periods[row - 1]
-        case .shareType:
-            return row==0 ? "Selecciona fuente" : shareTypes[row - 1]
         }
     }
     
@@ -217,8 +191,6 @@ extension SearchNewsController: UIPickerViewDelegate, UIPickerViewDataSource {
             return types.count+1
         case .period:
             return periods.count+1
-        case .shareType:
-            return shareTypes.count+1
         }
     }
     
@@ -241,8 +213,6 @@ extension SearchNewsController: UIPickerViewDelegate, UIPickerViewDataSource {
             label.text = row==0 ? "Selecciona tipo" : types[row - 1]
         case .period:
             label.text = row==0 ? "Selecciona periodo" : periods[row - 1]
-        case .shareType:
-            label.text = row==0 ? "Selecciona fuente" : shareTypes[row - 1]
         }
         
         return label

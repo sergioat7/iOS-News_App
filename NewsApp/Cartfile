@@ -2,3 +2,4 @@ github "Alamofire/Alamofire" == 4.8.2
 github "CosmicMind/Motion" == 1.4.3
 github "CosmicMind/Material" == 2.16.4
 github "rs/SDWebImage" == 4.4.3
+github "Hearst-DD/ObjectMapper" == 3.4.2

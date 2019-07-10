@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ObjectMapper
+
 
 class ArticlesController: UIViewController {
     
@@ -17,6 +19,9 @@ class ArticlesController: UIViewController {
     @IBOutlet weak var spinnerContainterView: UIView!
     @IBOutlet weak var spinnerView: SpinnerView!
     
+    var type: String!
+    var period: String!
+    var shareType: String?
     
     
     init(){
@@ -24,6 +29,12 @@ class ArticlesController: UIViewController {
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    convenience init(_ type: String, _ period: String, _ shareType: String?) {
+        self.init()
+        self.type = type
+        self.period = period
+        self.shareType = shareType
     }
     
     
@@ -43,51 +54,35 @@ class ArticlesController: UIViewController {
         spinnerView.strokeColor = UIColor.negro.cgColor
         
         
-        articlesTableViewController.titles.append("Android")
-        articlesTableViewController.titles.append("iOS")
-        articlesTableViewController.titles.append("Windows Phone")
-        articlesTableViewController.titles.append("SS.OO. Inexistente")
-        
-        articlesTableViewController.authors.append("Google")
-        articlesTableViewController.authors.append("Apple")
-        articlesTableViewController.authors.append("Microsoft")
-        articlesTableViewController.authors.append("Sin autor")
-        
-        articlesTableViewController.sections.append("Google Mobile")
-        articlesTableViewController.sections.append("Apple Phones")
-        articlesTableViewController.sections.append("Windows Mobile")
-        articlesTableViewController.sections.append("")
-        
-        articlesTableViewController.publishDates.append("23/09/2008")
-        articlesTableViewController.publishDates.append("29/06/2007")
-        articlesTableViewController.publishDates.append("21/10/2010")
-        articlesTableViewController.publishDates.append("")
-        
-        articlesTableViewController.articleURLs.append("https://www.google.com")
-        articlesTableViewController.articleURLs.append("https://www.apple.com")
-        articlesTableViewController.articleURLs.append("https://www.microsoft.com")
-        articlesTableViewController.articleURLs.append("https://www.noexiste.com/")
-        
-        
         getArticles()
     }
     
     func getArticles(){
-//        spinnerContainterView.isHidden = false
-//        Session.sharedSession().sessionManager?.request(NYTimesRouter.getNews(["mostviewed","7"]))
-//            .validate()
-//            .responseJSON { response in
+        let parameters: [String : Any?] = [
+            "type": type,
+            "period": period,
+            "shareType": shareType
+        ]
+        spinnerContainterView.isHidden = false
+        Session.sharedSession().sessionManager?.request(NYTimesRouter.getNews(parameters))
+            .validate()
+            .responseJSON { response in
+                switch(response.result){
+
+                case .success:
+                    if let json = response.result.value as? [String : Any], let jsonArray = json["results"] as? [[String : Any]], jsonArray.count > 0 {
+                        let articles: Array<Article> = Mapper<Article>().mapArray(JSONArray: jsonArray)
+                        self.articlesTableViewController.articles = articles
+                    }
+                    break
+
+                case .failure:
+                    break
+                }
+                
                 self.spinnerContainterView.isHidden = true
-//                switch(response.result){
-//
-//                case .success:
-                    self.articlesTableViewController.tableView.reloadData()
-//                    break
-//
-//                case .failure:
-//                    break
-//                }
-//        }
+                self.articlesTableViewController.tableView.reloadData()
+        }
     }
     
     func openArticle(_ articleURL: String){

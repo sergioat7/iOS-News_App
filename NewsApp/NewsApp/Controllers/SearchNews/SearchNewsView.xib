@@ -11,12 +11,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchNewsController" customModule="NewsApp" customModuleProvider="target">
             <connections>
+                <outlet property="facebookSwitch" destination="fgD-tI-1li" id="cFb-Qi-Bu1"/>
                 <outlet property="hidePickerViewConstraint" destination="fEb-9d-RS5" id="J3I-OO-LQD"/>
                 <outlet property="mainLabel" destination="uTF-TR-NSz" id="IIR-kz-7BF"/>
                 <outlet property="periodsButton" destination="yRS-2k-Je0" id="KCr-qH-sq0"/>
                 <outlet property="pickerView" destination="YOJ-M9-bYp" id="wM2-HT-6DY"/>
-                <outlet property="shareTypesButton" destination="WGm-Vc-iKI" id="5dk-AI-wiy"/>
-                <outlet property="shareTypesButtonHeight" destination="8Tm-IG-WiH" id="inW-Ck-XUw"/>
+                <outlet property="shareTypesViewHeight" destination="bx3-AG-6X9" id="wdS-LL-Web"/>
+                <outlet property="twitterSwitch" destination="Kdq-GY-XON" id="2Jf-Ik-D5A"/>
                 <outlet property="typesButton" destination="Zqj-yB-maa" id="j2v-NS-Ha3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -66,10 +67,43 @@ En el caso de que selecciones los más compartidos, también deberás selecciona
                     <state key="normal" title="Selecciona fuente">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
-                    <connections>
-                        <action selector="showShareTypePickerView" destination="-1" eventType="touchUpInside" id="eCX-eS-Sve"/>
-                    </connections>
                 </button>
+                <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EEv-CN-BEy">
+                    <rect key="frame" x="30" y="388.5" width="315" height="0.0"/>
+                    <subviews>
+                        <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mu4-zb-cbm">
+                            <rect key="frame" x="0.0" y="0.0" width="157.5" height="0.0"/>
+                            <subviews>
+                                <switch opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fgD-tI-1li">
+                                    <rect key="frame" x="54.5" y="0.0" width="51" height="0.0"/>
+                                </switch>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCA-58-plB">
+                                    <rect key="frame" x="41.5" y="0.0" width="74.5" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aof-aH-BKq">
+                            <rect key="frame" x="157.5" y="0.0" width="157.5" height="0.0"/>
+                            <subviews>
+                                <switch opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kdq-GY-XON">
+                                    <rect key="frame" x="54.5" y="0.0" width="51" height="0.0"/>
+                                </switch>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALS-ey-gTm">
+                                    <rect key="frame" x="52.5" y="0.0" width="53" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" id="bx3-AG-6X9"/>
+                    </constraints>
+                </stackView>
                 <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8e-7U-5N4" customClass="RoundedButton" customModule="NewsApp" customModuleProvider="target">
                     <rect key="frame" x="20" y="607" width="335" height="40"/>
                     <constraints>
@@ -123,6 +157,7 @@ En el caso de que selecciones los más compartidos, también deberás selecciona
                 <constraint firstItem="xJv-wX-fOh" firstAttribute="leading" secondItem="CBO-7H-ydH" secondAttribute="leading" id="9Yq-Nd-t2t"/>
                 <constraint firstItem="WGm-Vc-iKI" firstAttribute="leading" secondItem="CBO-7H-ydH" secondAttribute="leading" constant="30" id="9vu-pK-IIC"/>
                 <constraint firstItem="CBO-7H-ydH" firstAttribute="trailing" secondItem="yRS-2k-Je0" secondAttribute="trailing" constant="30" id="CPY-x8-1xE"/>
+                <constraint firstItem="U8e-7U-5N4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="EEv-CN-BEy" secondAttribute="bottom" constant="10" id="DtL-6Y-3Pc"/>
                 <constraint firstItem="CBO-7H-ydH" firstAttribute="trailing" secondItem="Zqj-yB-maa" secondAttribute="trailing" constant="30" id="HQ1-H7-c57"/>
                 <constraint firstItem="uTF-TR-NSz" firstAttribute="leading" secondItem="CBO-7H-ydH" secondAttribute="leading" constant="30" id="J26-9a-hP9"/>
                 <constraint firstItem="CBO-7H-ydH" firstAttribute="trailing" secondItem="WGm-Vc-iKI" secondAttribute="trailing" constant="30" id="JeN-TY-xBU"/>
@@ -130,11 +165,14 @@ En el caso de que selecciones los más compartidos, también deberás selecciona
                 <constraint firstItem="uTF-TR-NSz" firstAttribute="top" secondItem="CBO-7H-ydH" secondAttribute="top" constant="50" id="MPl-of-Ihe"/>
                 <constraint firstItem="yRS-2k-Je0" firstAttribute="top" secondItem="Zqj-yB-maa" secondAttribute="bottom" constant="20" id="UuZ-t9-Azg"/>
                 <constraint firstItem="yRS-2k-Je0" firstAttribute="leading" secondItem="CBO-7H-ydH" secondAttribute="leading" constant="30" id="VKm-GL-iEn"/>
+                <constraint firstItem="CBO-7H-ydH" firstAttribute="trailing" secondItem="EEv-CN-BEy" secondAttribute="trailing" constant="30" id="VwV-Nj-Dgs"/>
+                <constraint firstItem="EEv-CN-BEy" firstAttribute="leading" secondItem="CBO-7H-ydH" secondAttribute="leading" constant="30" id="Wdd-JP-b0C"/>
                 <constraint firstItem="yRS-2k-Je0" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Y5E-Ap-pm6"/>
                 <constraint firstItem="Zqj-yB-maa" firstAttribute="leading" secondItem="CBO-7H-ydH" secondAttribute="leading" constant="30" id="aYK-v4-8Dl"/>
                 <constraint firstItem="xJv-wX-fOh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="fEb-9d-RS5"/>
                 <constraint firstItem="CBO-7H-ydH" firstAttribute="trailing" secondItem="U8e-7U-5N4" secondAttribute="trailing" constant="20" id="fWG-9D-LH5"/>
                 <constraint firstItem="Zqj-yB-maa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uTF-TR-NSz" secondAttribute="bottom" constant="10" id="j26-9e-JDX"/>
+                <constraint firstItem="EEv-CN-BEy" firstAttribute="top" secondItem="WGm-Vc-iKI" secondAttribute="bottom" constant="20" id="rF5-m2-cR3"/>
                 <constraint firstItem="CBO-7H-ydH" firstAttribute="trailing" secondItem="uTF-TR-NSz" secondAttribute="trailing" constant="30" id="riW-pL-KLs"/>
                 <constraint firstItem="U8e-7U-5N4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WGm-Vc-iKI" secondAttribute="bottom" constant="10" id="rwq-OX-WAb"/>
                 <constraint firstItem="xJv-wX-fOh" firstAttribute="bottom" secondItem="CBO-7H-ydH" secondAttribute="bottom" priority="700" id="vQm-Wz-n2W"/>

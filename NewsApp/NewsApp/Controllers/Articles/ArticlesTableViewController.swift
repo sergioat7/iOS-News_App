@@ -9,11 +9,7 @@ import UIKit
 
 class ArticlesTableViewController: UITableViewController {
     
-    var titles = [String]()
-    var authors = [String]()
-    var sections = [String]()
-    var publishDates = [String]()
-    var articleURLs = [String]()
+    var articles = [Article]()
     
     
     var articlesController: ArticlesController!
@@ -24,7 +20,7 @@ class ArticlesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return titles.count
+        return articles.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -32,12 +28,12 @@ class ArticlesTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of VehicleTableViewCell.")
         }
         
-        cell.setImage("t_arrow")
-        cell.setTitle(titles[indexPath.row])
-        cell.setAuthor(authors[indexPath.row])
-        cell.setSection(sections[indexPath.row])
-        cell.setPublishDate(publishDates[indexPath.row])
-        cell.articleURL = articleURLs[indexPath.row]
+        cell.setImage(articles[indexPath.row].media?[0].mediaMetadata?[0].url)
+        cell.setTitle(articles[indexPath.row].title)
+        cell.setAuthor(articles[indexPath.row].author)
+        cell.setSection(articles[indexPath.row].section)
+        cell.setPublishDate(articles[indexPath.row].publishDate)
+        cell.articleURL = articles[indexPath.row].url ?? "https://www.-.com/"
         
         cell.selectionStyle = UITableViewCell.SelectionStyle.none
         return cell

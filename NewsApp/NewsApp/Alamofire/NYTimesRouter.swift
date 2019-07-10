@@ -13,7 +13,7 @@ enum NYTimesRouter: URLRequestConvertible {
     static let apiKey = "2bB0BGGe2pysadVQorASzqyClBzI5w1G"
     static let baseURLString = "https://api.nytimes.com/svc/mostpopular/v2"
     
-    case getNews([String])
+    case getNews([String : Any?])
     
     func asURLRequest() throws -> URLRequest {
         var method: HTTPMethod {
@@ -32,8 +32,12 @@ enum NYTimesRouter: URLRequestConvertible {
             let relativePath: String?
             switch self {
             case .getNews(let newValue):
-                relativePath = "/\(newValue[0])/all-sections/\(newValue[1]).json"
-//                relativePath = "/\(newValue[0])/all-sections/facebook/\(newValue[1]).json?api-key=" + NYTimesRouter.apiKey
+                if let shareType = newValue["shareType"] as? String {
+                    relativePath = "/\(newValue["type"] as! String)/all-sections/\(shareType)/\(newValue["period"] as! String).json"
+                }
+                else {
+                    relativePath = "/\(newValue["type"] as! String)/all-sections/\(newValue["period"] as! String).json"
+                }
             }
             var url = URL(string: NYTimesRouter.baseURLString)!
             if let relativePath = relativePath {
